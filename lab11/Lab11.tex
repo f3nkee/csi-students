@@ -1,0 +1,274 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[top=2cm, bottom=2cm, right=2cm, left=2cm]{geometry}
+\usepackage[russian]{babel}
+\usepackage{pscyr}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{amstext}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{cmap}
+\usepackage{enumitem}
+\usepackage{multirow}
+\pdfminorversion=6
+%\input{environment}
+%\linespread{1.3}
+\tolerance=1000 
+\hfuzz=0pt
+\parindent=1.27cm
+\usepackage{subcaption}
+\captionsetup[table]{name = Таблица, labelsep = endash, justification=raggedright, singlelinecheck=false}
+\captionsetup[figure]{name = Рисунок, labelsep = endash}
+%\sloppy
+\RequirePackage{caption}
+\DeclareCaptionLabelSeparator{defffis}{ -- }
+\captionsetup{justification=centering,labelsep=defffis}
+\usepackage{array}
+\usepackage{subcaption}
+\usepackage{pgfplots}
+\usetikzlibrary{pgfplots.polar}
+\pgfplotsset{compat=1.13}
+\pgfplotsset{grid = major, grid style = {dashed}}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{pgfplotstable}
+\renewcommand{\arraystretch}{1.5}
+% recommended:
+\usepackage{booktabs}
+\usepackage{colortbl}
+\graphicspath{{images/}}
+
+\begin{document}
+	\input{page11}
+	\paragraph{Цель работы.}  Изучение математических моделей и исследование характеристик исполнительного устройства, построенного на основе пьезоэлектрического двигателя микроперемещений. 
+	\paragraph {Исходные данные:} Представлены в таблице \ref{t_1}
+	\begin{table}[h]
+		\caption{Исходные данные}
+		\renewcommand{\arraystretch}{2} 
+		\renewcommand{\tabcolsep}{0.35cm}
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				$Cp$, Н/м & $m$, кг & $K_0$, Н/В & $K_d$, Нс/м & $T_u$, мс & $F_{\text{в}}$ \\ \hline
+				0.6 $\cdot 10^8$ & 0.5 & 8.2 & 900 & 0.05 & 50  \\ \hline
+			\end{tabular}
+		\end{center}
+		\label{t_1}
+	\end{table}
+	
+	\paragraph {} Рассчет необходимых параметров модели:\\
+	
+	\noindent
+	$K_u=\displaystyle\frac{U_{Pm}}{U_m}=\frac{300}{10}=30$\\
+	
+	Коэффициенты передачи измерительных устройств:\\
+	
+	\noindent
+	$
+	K_V=28.6\\
+	K_F=0.0067\\
+	K_X=1.45\cdot 10^5\\	
+	$
+	\newpage
+	\begin{center}
+	\section{Исследование системы без возмущения}
+	\end{center}
+	\paragraph {} Схема моделирования представлена на рисунке \ref{s_1}
+	
+	\begin{figure}[h]
+		\renewcommand{\figurename}{Рисунок}
+		\centering
+		\includegraphics[width=6in]{Labb11.pdf}
+		\caption{Схема моделирования}
+		\label{s_1}
+	\end{figure}
+	%\newpage
+	\paragraph {} Графики переходных процессов при $U=10$ и $F_{\text{в}}=0$ для каждого из исследуемых значений представлены на рисунке \ref{s_2}\\
+	
+	\begin{figure}[h!]
+		\renewcommand{\figurename}{Рисунок}
+		\begin{minipage}[h]{0.47\linewidth}
+			\center{\includegraphics[width=1\linewidth]{phf1.eps}} a) \\
+		\end{minipage}
+		\hfill
+		\begin{minipage}[h]{0.47\linewidth}
+			\center{\includegraphics[width=1\linewidth]{phv1.eps}} \\b)
+		\end{minipage}
+		\vfill
+		\begin{minipage}[h]{0.47\linewidth}
+			\center{\includegraphics[width=1\linewidth]{phu1.eps}} c) \\
+		\end{minipage}
+		\hfill
+		\begin{minipage}[h]{0.47\linewidth}
+			\center{\includegraphics[width=1\linewidth]{phx1.eps}} d) \\
+		\end{minipage}
+		\caption{Переходные процессы: a) динамическое усилие, b)
+			скорость, c) напряжение, d) перемещение}
+		\label{s_2}
+	\end{figure}
+
+	\clearpage
+	\begin{center}
+	\section{Исследование влияния массы нагрузки $m$ на вид переходных процессов}
+	\end{center}
+		
+		
+			\paragraph {} Графики переходных процессов при различных $m$ для каждого из исследуемых значений представлены на рисунке \ref{s_3}\\
+		
+		\begin{figure}[h!]
+			\renewcommand{\figurename}{Рисунок}
+			\begin{minipage}[h]{0.47\linewidth}
+				\center{\includegraphics[width=1\linewidth]{f_pri_m.eps}} a) \\
+			\end{minipage}
+			\hfill
+			\begin{minipage}[h]{0.47\linewidth}
+				\center{\includegraphics[width=1\linewidth]{v_pri_m.eps}} \\b)
+			\end{minipage}
+			\vfill
+			\begin{minipage}[h]{0.47\linewidth}
+				\center{\includegraphics[width=1\linewidth]{u_pri_m.eps}} c) \\
+			\end{minipage}
+			\hfill
+			\begin{minipage}[h]{0.47\linewidth}
+				\center{\includegraphics[width=1\linewidth]{x_pri_m.eps}} d) \\
+			\end{minipage}
+			\caption{Переходные процессы: a) динамическое усилие, b)
+				скорость, c) напряжение, d) перемещение}
+			\label{s_3}
+		\end{figure}
+	\newpage
+	\paragraph{}Рассчитаем значения времени переходного процесса $t_\text{п}$, установившееся значение $x_y$ и перерегулирование $\sigma$ при различных $m$ для $x$. Результаты представлены в таблице \ref{t_2}
+	\begin{table}[h]
+		\caption{Данные моделирования}
+		\renewcommand{\arraystretch}{2} 
+		\renewcommand{\tabcolsep}{0.5cm}
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				$m$ & $t_\text{п} \cdot 10^4$ & $x_y$ & $\sigma$(\%)  \\ \hline
+				0.25 & 15 & 6 & 53 \\ \hline
+				0.425 & 27 & 6 & 64 \\ \hline
+				0.6 & 39 & 6 & 69 \\ \hline
+				0.75 & 57 & 6 & 70 \\ \hline
+				
+			\end{tabular}
+		\end{center}
+		\label{t_2}
+	\end{table}
+	\newpage
+	\begin{center}
+	\section{Исследование влияния постоянной времени ВУ $T_u$ на вид переходных процессов}
+	\end{center}
+	
+	\paragraph {} Графики переходных процессов при различных $T_u$ для каждого из исследуемых значений представлены на рисунке \ref{s_4}\\
+	\begin{figure}[h!]
+		\renewcommand{\figurename}{Рисунок}
+		\begin{minipage}[h]{0.47\linewidth}
+			\center{\includegraphics[width=1\linewidth]{f_pri_tu.eps}} a) \\
+		\end{minipage}
+		\hfill
+		\begin{minipage}[h]{0.47\linewidth}
+			\center{\includegraphics[width=1\linewidth]{v_pri_tu.eps}} \\b)
+		\end{minipage}
+		\vfill
+		\begin{minipage}[h]{0.47\linewidth}
+			\center{\includegraphics[width=1\linewidth]{u_pri_tu.eps}} c) \\
+		\end{minipage}
+		\hfill
+		\begin{minipage}[h]{0.47\linewidth}
+			\center{\includegraphics[width=1\linewidth]{x_pri_tu.eps}} d) \\
+		\end{minipage}
+		\caption{Переходные процессы: a) динамическое усилие, b)
+			скорость, c) напряжение, d) перемещение}
+		\label{s_4}
+	\end{figure}
+	\newpage
+	\paragraph{}Рассчитаем значения времени переходного процесса $t_\text{п}$, установившееся значение $x_y$ и перерегулирование $\sigma$ при различных $T_u$ для $x$. Результаты представлены в таблице \ref{t_3}
+	\begin{table}[h]
+		\caption{Данные моделирования}
+		\renewcommand{\arraystretch}{2} 
+		\renewcommand{\tabcolsep}{0.5cm}
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				$T_u\cdot 10^{-4}$ & $t_\text{п} \cdot 10^4$ & $x_y$ & $\sigma$(\%)  \\ \hline
+				0.5 & 30 & 6 & 67 \\ \hline
+				1 & 27 & 6 & 49 \\ \hline
+				2 & 16 & 6 & 14 \\ \hline
+				3 & 14 & 6 & 5 \\ \hline
+			\end{tabular}
+		\end{center}
+		\label{t_3}
+	\end{table}
+	
+	\newpage
+	\begin{center}
+	\section{Исследование переходных процессов по возмущению}
+	\end{center}
+			\paragraph {} Графики переходных процессов $V$ и $x$ при $F_{\text{в}}$ и $U=0$ для различных значений коэффициента упругости $C_p$ представлены на рисунках \ref{s_5} и \ref{s_6} соответственно\\
+			
+			\begin{figure}[h!]
+				\begin{center}
+					\begin{minipage}[h]{0.45\linewidth}
+						\renewcommand{\figurename}{Рисунок}
+						\includegraphics[width=1\linewidth]{v_pri_cp.eps}
+						\caption{Переходные процессы для $V$} 
+						\label{s_5} 
+					\end{minipage}
+					\hfill 
+					\begin{minipage}[h]{0.45\linewidth}
+						\renewcommand{\figurename}{Рисунок}
+						\includegraphics[width=1\linewidth]{x_pri_cp.eps}
+						\caption{Переходные процессы для $x$}
+						\label{s_6}
+					\end{minipage}
+				\end{center}
+			\end{figure}	
+	\newpage
+	\begin{center}
+		\section{Асимптотическая ЛАЧХ исполнительного устройтсва}
+	\end{center}
+	\paragraph{}По схеме моделирования составим выражение для передаточной функции системы:
+	\begin{gather}
+	\displaystyle W(s)=\frac{K_u\cdot K_o}{(T_u s+1)(ms^2+K_d+C_p)}
+	\end{gather}
+	Чтобы получить модуль частотной характеристики нужно взять отношение модулей числителя и знаменателя. В последнем в качестве второго множителя для приближенного анализа можно оставить только $C_p$. В итоге:
+	\begin{gather}
+	\displaystyle
+	A(w)=\frac{K_u\cdot K_o}{C_p\cdot \sqrt{T_u^2 w^2+1}}
+	\end{gather}	
+	Асимптотическая ЛАЧХ представлена на рисунке \ref{s_7}
+	\begin{figure}[h!]
+			
+		\centering
+		\begin{tikzpicture}
+		\begin{semilogxaxis} [
+		width = 0.9\textwidth,
+		ylabel = {$L(w)$, дБ},
+		xlabel = {$w$, рад/c},
+		xmin=1e3, xmax=1e6,
+		]
+		\addplot [blue, mark=none, thick, solid] table [x={w}, y={L}] {data/laqc.dat};
+		\end{semilogxaxis}
+		
+		\end{tikzpicture}
+		
+		\caption{ЛАЧХ исполнительного устройства}
+			\label{s_7}
+	\end{figure}
+
+		\newpage
+	\begin{center}
+		\section{Выводы} 
+	\end{center}
+	\par
+	В данной работе была исследована математическая модель пьезоэлектрического исполнительного устройства. Были исследованы переходные характеристики некоторых величин и их зависимость от параметров системы.
+	\par
+	Было выявлено, что при увеличении массы нагрузки перерегулирование и время переходного процесса перемещения $x$ механизма. А при увеличении постоянной времени $T_u$ - наоборот. 
+	\par
+	При возмущающем воздействии увеличение коэффициента упругости $C_p$ ведет к снижению колебаний и уменьшению установившегося значения $x$. 
+	
+\end{document}
