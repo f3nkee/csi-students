@@ -50,35 +50,64 @@
 \DeclareCaptionLabelSeparator{defffis}{ -- }
 \captionsetup{justification=centering,labelsep=defffis}
 \renewcommand{\figurename}{Рисунок}
-\graphicspath{{eps/}{pdf/}{models/}}
+\graphicspath{{images/}{models/}}
 
 \begin{document}
 	\input{page9}
 	\paragraph{Цель работы.} 	Изучение частотных характеристик типовых динамических звеньев и способов их построения. 
-	\paragraph {Исходные данные:} Типы звеньев представлены в таблице \ref{t_1}. Исследования производятся при следующих коэффициентах:~$k=15$ и $T=0.2$. И при гармоническом входном воздействии с единичной амплитудой и переменной частотой.
+	\paragraph {Исходные данные:} Типы звеньев представлены в таблице \ref{t_1}. Исследования производятся при следующих коэффициентах:~$k=15$, $T=0.2$ и $\xi=0.2$.  И при гармоническом входном воздействии с единичной амплитудой и переменной частотой.
 	\begin{table}[h]
+		\centering
 		\caption{Исходные данные}
 		\renewcommand{\arraystretch}{2} 
-		%\renewcommand{\tabcolsep}{0.35cm}
-		\begin{center}
+		\renewcommand{\tabcolsep}{1.6cm}
+		\begin{threeparttable}
+		
+		
 			\begin{tabular}{|c|c|}
+				
 				\hline
 				Тип звена & Передаточная функция \\ \hline
 				Апериодическое 1го порядка & $\displaystyle W(s)=\frac{k}{Ts+1}$ \\ \hline
 				Интегрирующее с замедлением & $\displaystyle W(s)=\frac{k}{s\cdot (1+Ts)}$ \\ \hline
 				Изодромное & $\displaystyle W(s)=\frac{k\cdot (1+Ts)}{s}$ \\ \hline
-			\end{tabular}
-		\end{center}
+			
+		\end{tabular}
+		\end{threeparttable}
 		\label{t_1}
 	\end{table}
 	
+	
+	\newpage
+	\begin{center}
+		\section{Временная диаграмма}
+	\end{center}
+	\par
+	Получение данных моделирования по полученной временной диаграмме, представленной на рисунке \ref{prim}, на примере апериодического звена 1го порядка при входном сигнале $g(t)=1sin(wt)$ и $w=2,k=15, T=0.2$
+	\begin{figure}[h!]
+		\renewcommand{\figurename}{Рисунок}
+		\centering
+		\includegraphics[width=6in]{prim.eps}
+		\caption{Временная диаграмма}
+		\label{prim}
+	\end{figure}\\
+
+	По рисунку видно, что амплитуда выходного сигнала $y$ равна 13.93, а амплитуда входного сигнала равна 1 $\Rightarrow A(w)=\frac{13.93}{1}=13.93$ Также видно, что входной сигнал пересекает ось времени при $t_g=1.57$, а выходной - при $t_y=1.76$, значит, $g$ опережает $y$ по фазе на угол $\phi=w\cdot \Delta t$, где $\Delta t=t_y-t_g$. Получается, фаза выходного сигнала отстает от входного $\Rightarrow \psi=-\phi$. По расчетам получается: $\Delta t = 1.76-1.57=0.19 \Rightarrow \phi=2\cdot0.19=0.38 \Rightarrow \psi=-0.38$     
+	
+	
+
+
+
+
 	\newpage
 	\begin{center}
 	\section{Исследование апериодического звена 1го порядка}
 	\end{center}
 	\paragraph{} Данные моделирования представлены в таблице \ref{t_2}
+	
 		\begin{table}[h!]
 			\centering
+			\begin{threeparttable}
 				\caption{Данные моделирования} \label{t_2}
 				\pgfplotstableset{
 					columns={w,lgw,A,L,psi},
@@ -98,11 +127,12 @@
 			}
 			]
 			{data/NewAp1.dat}
+			\end{threeparttable}
 		\end{table}
 	\newpage
-	\paragraph{} Частотные характеристики представлены на рисунке 1
+	\paragraph{} Частотные характеристики представлены на рисунке \ref{s_1}
 	\begin{figure}[h!]
-			\label{s_1}
+		
 			\renewcommand{\figurename}{Рисунок}
 		\begin{subfigure}{0.5\textwidth}
 			\centering
@@ -161,6 +191,7 @@
 		\end{subfigure}
 	
 		\caption{Частотные характеристики апериодического звена}
+		\label{s_1}
 	\end{figure}
 	
 	\newpage
@@ -170,6 +201,7 @@
 	\paragraph{} Данные моделирования представлены в таблице \ref{t_3}
 	\begin{table}[h!]
 		\centering
+		\begin{threeparttable}
 		\caption{Данные моделирования} \label{t_3}
 		\pgfplotstableset{
 			columns={w,lgw,A,L,psi},
@@ -189,11 +221,12 @@
 		}
 		]
 		{data/NewIntegrszamed.dat}
+		\end{threeparttable}
 	\end{table}
 	\newpage
-	\paragraph{} Частотные характеристики представлены на рисунке 2
+	\paragraph{} Частотные характеристики представлены на рисунке \ref{s_2}
 	\begin{figure}[h!]
-		\label{s_2}
+		
 		\renewcommand{\figurename}{Рисунок}
 		\begin{subfigure}{0.5\textwidth}
 			\centering
@@ -252,6 +285,7 @@
 		\end{subfigure}
 		
 		\caption{Частотные характеристики интегрирующего с замедлением звена}
+		\label{s_2}
 	\end{figure}
 	
 	
@@ -262,17 +296,18 @@
 	\paragraph{} Данные моделирования представлены в таблице \ref{t_4}
 	\begin{table}[h!]
 		\centering
+		\begin{threeparttable}
 		\caption{Данные моделирования} \label{t_4}
 		\pgfplotstableset{
-			columns={w,lgw,A,L,psi},
-			columns/w/.style = {column name = {$\omega$}, column type = |c|},
-			columns/lgW/.style = {column name = {$\lg{\omega}$}, column type = |c},
-			columns/A/.style = {column name = {$A(\omega)$}, column type = |c},
-			columns/L/.style = {column name = {$L(w)=20\lg{A(\omega)}$}, column type = |c},
-			columns/psi/.style = {column name = {$\psi(w)$}, column type = |c|},
-			every head row/.style = {before row = \hline},
-			after row = {[1mm] \hline},
-		}
+		columns={w,lgw,A,L,psi},
+		columns/w/.style = {column name = {$\omega$}, column type = |c|},
+		columns/lgW/.style = {column name = {$\lg{\omega}$}, column type = |c},
+		columns/A/.style = {column name = {$A(\omega)$}, column type = |c},
+		columns/L/.style = {column name = {$L(w)=20\lg{A(\omega)}$}, column type = |c},
+		columns/psi/.style = {column name = {$\psi(w)$}, column type = |c|},
+		every head row/.style = {before row = \hline},
+		after row = {[1mm] \hline},
+	}
 		\pgfplotstabletypeset[ % local config, applies only for this table
 		1000 sep={\,},
 		columns/info/.style={
@@ -281,11 +316,12 @@
 		}
 		]
 		{data/NewIzodrom.dat}
+		\end{threeparttable}
 	\end{table}
 	\newpage
-	\paragraph{} Частотные характеристики представлены на рисунке 3
+	\paragraph{} Частотные характеристики представлены на рисунке \ref{s_3}
 	\begin{figure}[h!]
-		\label{s_3}
+	
 		\renewcommand{\figurename}{Рисунок}
 		\begin{subfigure}{0.5\textwidth}
 			\centering
@@ -344,6 +380,7 @@
 		\end{subfigure}
 		
 		\caption{Частотные характеристики изодромного звена}
+			\label{s_3}
 	\end{figure}
 	
 	\newpage
@@ -351,9 +388,9 @@
 	\section{Асимптотические ЛАЧХ исследуемых звеньев}
 	\end{center}
 	\paragraph{}
-	На рисунках 4, 5 и 6 представлены асимптотические и полученные моделированием ЛАЧХ для апериодического, интегрирующего с замедлением и изодромного звена соответственно.
+	На рисунках \ref{s_4}, \ref{s_5} и \ref{s_6} представлены асимптотические и полученные моделированием ЛАЧХ для апериодического, интегрирующего с замедлением и изодромного звена соответственно.
 	\begin{figure}[h!]
-		\label{s_4}
+		
 		\renewcommand{\figurename}{Рисунок}
 		
 			\centering
@@ -369,6 +406,7 @@
 			\end{semilogxaxis}
 			\end{tikzpicture}
 				\caption{ЛАЧХ апериодического звена 1го порядка}
+				\label{s_4}
 		\end{figure}
 		
 		\begin{figure}[h!]
@@ -385,6 +423,7 @@
 			\end{semilogxaxis}
 			\end{tikzpicture}
 			\caption{ЛАЧХ интегрирующего с замедлением звена}
+			\label{s_5}
 	\end{figure}
 		\begin{figure}[h!]
 			
@@ -402,12 +441,13 @@
 				\end{tikzpicture}
 		
 		\caption{ЛАЧХ изодромного звена}
+		\label{s_6}
 	\end{figure}
 
 
 	\clearpage
 	\begin{center}
-	\section{Выводы}
+	\section*{Вывод}
 	\end{center}
 	
 	В данной работе были исследованы три динамических звена: апериодическое 1го порядка, интегрирующее с замедлением и изодромное. В результате были получены частотные характеристики, по которым можно судить о значениях амплитуды и фазы выходного сигнала звена в зависимости от параметров входного сигнала. Также были построены теоретические асимптотические ЛАЧХ, которые подтвердили данные, полученные моделированием.

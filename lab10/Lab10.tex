@@ -19,13 +19,15 @@
 \tolerance=1000 
 \hfuzz=0pt
 \parindent=1.27cm
+\usepackage{tabu}
+\usepackage{threeparttable}
 \usepackage{subcaption}
 \captionsetup[table]{name = Таблица, labelsep = endash, justification=raggedright, singlelinecheck=false}
 \captionsetup[figure]{name = Рисунок, labelsep = endash}
 %\sloppy
-\RequirePackage{caption}
-\DeclareCaptionLabelSeparator{defffis}{ -- }
-\captionsetup{justification=centering,labelsep=defffis}
+%\RequirePackage{caption}
+%\DeclareCaptionLabelSeparator{defffis}{ -- }
+%\captionsetup{justification=centering,labelsep=defffis}
 
 \graphicspath{{images/}}
 
@@ -34,16 +36,17 @@
 	\paragraph{Цель работы.}  Изучение математических моделей и исследование характеристик электромеханического объекта управления, построенного на основе электродвигателя постоянного тока независимого возбуждения.
 	\paragraph {Исходные данные:} Представлены в таблице \ref{t_1}
 	\begin{table}[h]
+		\centering
 		\caption{Исходные данные}
 		\renewcommand{\arraystretch}{2} 
-		\renewcommand{\tabcolsep}{0.35cm}
-		\begin{center}
+		\renewcommand{\tabcolsep}{0.25cm}
+		\begin{threeparttable}
 			\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
 				\hline
 				$U_H$, В & $n_0$, об/мин & $I_H$, А & $M_H$, Нм & $R$, Ом & $T_{\text{я}}$, мс &$J_{\text{д}}$, кг$\cdot\text{м}^2$ & $T_y$, мс & $i_p$ & $J_{\text{м}}$, кг$\cdot\text{м}^2$ \\ \hline
 				120 & 6000 & 21 & 4 & 0.53 & 8 & 1.9$\cdot10^{-3}$ & 8 & 40 & 5.75 \\ \hline
 			\end{tabular}
-		\end{center}
+		\end{threeparttable}
 		\label{t_1}
 	\end{table}
 	
@@ -105,15 +108,15 @@
 			\end{minipage}
 			\hfill
 			\begin{minipage}[h]{0.47\linewidth}
-				\center{\includegraphics[width=1\linewidth]{w_pri_mcm.eps}} \\b)
+				\center{\includegraphics[width=1\linewidth]{w_pri_mcm_new.eps}} \\b)
 			\end{minipage}
 			\vfill
 			\begin{minipage}[h]{0.47\linewidth}
-				\center{\includegraphics[width=1\linewidth]{u_pri_mcm.eps}} c) \\
+				\center{\includegraphics[width=1\linewidth]{u_pri_mcm_new.eps}} c) \\
 			\end{minipage}
 			\hfill
 			\begin{minipage}[h]{0.47\linewidth}
-				\center{\includegraphics[width=1\linewidth]{i_pri_mcm.eps}} d) \\
+				\center{\includegraphics[width=1\linewidth]{i_pri_mcm_new.eps}} d) \\
 			\end{minipage}
 			\caption{Переходные процессы: a) угол поворота, b)
 				скорость вращения, c) напряжение, d) сила тока}
@@ -122,10 +125,11 @@
 	\newpage
 	\paragraph{}Рассчитаем значения времени переходного процесса $t_\text{п}$ и установившееся значение при различных $M_{\text{см}}$ для $w$ и $I$. Результаты представлены в таблице \ref{t_2}
 	 \begin{table}[h]
+	 	\centering
 		\caption{Данные моделирования}
 		\renewcommand{\arraystretch}{2} 
-		\renewcommand{\tabcolsep}{0.5cm}
-		\begin{center}
+		\renewcommand{\tabcolsep}{1.3cm}
+		\begin{flushleft}
 			\begin{tabular}{|c|c|c|c|c|}
 				\hline
 				\multirow{2}*{$M_{\text{см}}$} & \multicolumn{2}{|c|}{$t_\text{п}$} & \multicolumn{2}{|c|}{Установившееся значение} \\ \cline{2-5}
@@ -136,7 +140,7 @@
 				160 & 0.25 & 0.36 & 8.13 & 2.37\\ \hline
 				
 			\end{tabular}
-		\end{center}
+		\end{flushleft}
 		\label{t_2}
 	\end{table}
 	\newpage
@@ -150,15 +154,15 @@
 		\end{minipage}
 		\hfill
 		\begin{minipage}[h]{0.47\linewidth}
-			\center{\includegraphics[width=1\linewidth]{w_pri_jm.eps}} \\b)
+			\center{\includegraphics[width=1\linewidth]{w_pri_jm_new.eps}} \\b)
 		\end{minipage}
 		\vfill
 		\begin{minipage}[h]{0.47\linewidth}
-			\center{\includegraphics[width=1\linewidth]{u_pri_jm.eps}} c) \\
+			\center{\includegraphics[width=1\linewidth]{uu.eps}} c) \\
 		\end{minipage}
 		\hfill
 		\begin{minipage}[h]{0.47\linewidth}
-			\center{\includegraphics[width=1\linewidth]{i_pri_jm.eps}} d) \\
+			\center{\includegraphics[width=1\linewidth]{ii.eps}} d) \\
 		\end{minipage}
 		\caption{Переходные процессы: a) угол поворота, b)
 			скорость вращения, c) напряжение, d) сила тока}
@@ -169,8 +173,8 @@
 	\begin{table}[h]
 		\caption{Данные моделирования}
 		\renewcommand{\arraystretch}{2} 
-		\renewcommand{\tabcolsep}{0.5cm}
-		\begin{center}
+		\renewcommand{\tabcolsep}{1.3cm}
+		\begin{flushleft}
 			\begin{tabular}{|c|c|c|c|c|}
 				\hline
 				\multirow{2}*{$J_{\text{м}}$} & \multicolumn{2}{|c|}{$t_\text{п}$} & \multicolumn{2}{|c|}{Установившееся значение} \\ \cline{2-5}
@@ -181,7 +185,7 @@
 				8.625 & 0.31 & 0.49 & 9.13 & 0.12\\ \hline
 				
 			\end{tabular}
-		\end{center}
+		\end{flushleft}
 		\label{t_3}
 	\end{table}
 	
@@ -203,11 +207,11 @@
 		\end{minipage}
 		\vfill
 		\begin{minipage}[h]{0.47\linewidth}
-			\center{\includegraphics[width=1\linewidth]{new_u_ip_m0.eps}} c) \\
+			\center{\includegraphics[width=1\linewidth]{u_pri_ip_m0_new.eps}} c) \\
 		\end{minipage}
 		\hfill
 		\begin{minipage}[h]{0.47\linewidth}
-			\center{\includegraphics[width=1\linewidth]{new_i_ip_m0.eps}} d) \\
+			\center{\includegraphics[width=1\linewidth]{i_pri_ip_m0_new.eps}} d) \\
 		\end{minipage}
 		\caption{Переходные процессы: a) угол поворота, b)
 			скорость вращения, c) напряжение, d) сила тока}
@@ -218,8 +222,8 @@
 	\begin{table}[h]
 		\caption{Данные моделирования}
 		\renewcommand{\arraystretch}{2} 
-		\renewcommand{\tabcolsep}{0.5cm}
-		\begin{center}
+		\renewcommand{\tabcolsep}{1.3cm}
+		\begin{flushleft}
 			\begin{tabular}{|c|c|c|c|c|}
 				\hline
 				\multirow{2}*{$i_p$} & \multicolumn{2}{|c|}{$t_\text{п}$} & \multicolumn{2}{|c|}{Установившееся значение} \\ \cline{2-5}
@@ -230,42 +234,51 @@
 				70 & 0.14 & 1.37 & 10 & 0\\ \hline
 				
 			\end{tabular}
-		\end{center}
+		\end{flushleft}
 		\label{t_4}
 	\end{table}
 	\newpage
 	\paragraph {При $M_{\text{см}}=80$}~\\ 
 	
-	Графики переходных процессов при различных $i_p$ для каждого из исследуемых значений представлены на рисунке \ref{s_6}\\
+	Графики переходных процессов при различных $i_p$ для каждого из исследуемых значений представлены на рисунках \ref{s_6}, \ref{s_w} и \ref{s_i}\\
 	
 	\begin{figure}[h!]
 		\renewcommand{\figurename}{Рисунок}
 		\begin{minipage}[h]{0.47\linewidth}
-			\center{\includegraphics[width=1\linewidth]{new_a_ip_m80.eps}} a) \\
+			\center{\includegraphics[width=1\linewidth]{a_pri_ip_m80_new.eps}} \\a) \\
 		\end{minipage}
 		\hfill
 		\begin{minipage}[h]{0.47\linewidth}
-			\center{\includegraphics[width=1\linewidth]{new_w_ip_m80.eps}} \\b)
+			\center{\includegraphics[width=1\linewidth]{u_pri_ip_m80_new.eps}} \\b)
 		\end{minipage}
-		\vfill
-		\begin{minipage}[h]{0.47\linewidth}
-			\center{\includegraphics[width=1\linewidth]{new_u_ip_m80.eps}} c) \\
-		\end{minipage}
-		\hfill
-		\begin{minipage}[h]{0.47\linewidth}
-			\center{\includegraphics[width=1\linewidth]{new_i_ip_m80.eps}} d) \\
-		\end{minipage}
-		\caption{Переходные процессы: a) угол поворота, b)
-			скорость вращения, c) напряжение, d) сила тока}
+		\caption{Переходные процессы: a) угол поворота, b) напряжение}
 		\label{s_6}
 	\end{figure}
+
+		\begin{figure}[h!]
+		\renewcommand{\figurename}{Рисунок}
+		\centering
+		\includegraphics[width=6in]{wm80.eps}
+		\caption{Переходной процесс скорости}
+		\label{s_w}
+	\end{figure}
+			
+			
+				\begin{figure}[h!]
+				\renewcommand{\figurename}{Рисунок}
+				\centering
+				\includegraphics[width=6in]{im80.eps}
+				\caption{Переходной процесс тока}
+				\label{s_i}
+			\end{figure}
+		
 	\newpage
 	\paragraph{}Рассчитаем значения времени переходного процесса $t_\text{п}$ и установившееся значение при различных $i_p$ для $w$ и $I$. Результаты представлены в таблице \ref{t_5}
 	\begin{table}[h]
 		\caption{Данные моделирования}
 		\renewcommand{\arraystretch}{2} 
-		\renewcommand{\tabcolsep}{0.5cm}
-		\begin{center}
+		\renewcommand{\tabcolsep}{1.3cm}
+		\begin{flushleft}
 			\begin{tabular}{|c|c|c|c|c|}
 				\hline
 				\multirow{2}*{$i_p$} & \multicolumn{2}{|c|}{$t_\text{п}$} & \multicolumn{2}{|c|}{Установившееся значение} \\ \cline{2-5}
@@ -276,7 +289,7 @@
 				70 & 0.14 & 0.27 & 9.47 & 0.67\\ \hline
 				
 			\end{tabular}
-		\end{center}
+		\end{flushleft}
 		\label{t_5}
 	\end{table}
 	\newpage
@@ -383,7 +396,7 @@
 		\end{gather}
 	\newpage
 	\begin{center}
-	\section{Выводы} 
+	\section*{Вывод} 
 	\end{center}
 	\par
 	В данной работе была исследована математическая модель электромеханического объекта управления. Были выявлены зависимости переходных процессов от различных параметров. Так, при увеличении момента сопротивления установившееся значение тока якоря увеличивается, а скорости - уменьшается. При увеличении момента инерции механизма время переходного процесса скорости вращения двигателя и среднее значение тока за время своего переходного процесса увеличиваются. При уменьшении передаточного числа редуктора при нулевом моменте сопротивления увеличивается время переходных процессов. А при ненулевом моменте сопротивления увеличивается значение установившегося тока и уменьшается значение скорости. 
