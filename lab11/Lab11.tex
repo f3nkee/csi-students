@@ -146,11 +146,11 @@
 		\centering
 		\caption{Данные моделирования}
 		\renewcommand{\arraystretch}{2} 
-		\renewcommand{\tabcolsep}{1.75cm}
+		\renewcommand{\tabcolsep}{1.6cm}
 		\begin{center}
 			\begin{tabular}{|c|c|c|c|}
 				\hline
-				$m$ & $t_\text{п} \cdot 10^4$ & $x_y$ & $\sigma$(\%)  \\ \hline
+				$m$, кг & $t_\text{п} \cdot 10^4$,с & $x_y\cdot K_x$,м & $\sigma$(\%)  \\ \hline
 				0.25 & 15 & 6 & 53 \\ \hline
 				0.425 & 27 & 6 & 64 \\ \hline
 				0.6 & 39 & 6 & 69 \\ \hline
@@ -193,11 +193,11 @@
 		\centering
 		\caption{Данные моделирования}
 		\renewcommand{\arraystretch}{2} 
-		\renewcommand{\tabcolsep}{1.65cm}
+		\renewcommand{\tabcolsep}{1.45cm}
 		\begin{center}
 			\begin{tabular}{|c|c|c|c|}
 				\hline
-				$T_u\cdot 10^{-4}$ & $t_\text{п} \cdot 10^4$ & $x_y$ & $\sigma$(\%)  \\ \hline
+				$T_u\cdot 10^{4}$,с & $t_\text{п} \cdot 10^4$,с & $x_y\cdot K_x$, м & $\sigma$(\%)  \\ \hline
 				0.5 & 30 & 6 & 67 \\ \hline
 				1 & 27 & 6 & 49 \\ \hline
 				2 & 16 & 6 & 14 \\ \hline
@@ -206,6 +206,20 @@
 		\end{center}
 		\label{t_3}
 	\end{table}
+	
+	Корни характеристического уравнения (\ref{v}) при $m=0.5,~C_p=0.6\cdot 10^8,~K_d=900$ и различных $T_u$:\\
+	\begin{gather}
+	(T_u s+1)(ms^2+K_d+C_p)=0 \label{v}
+	\end{gather}
+	\\
+	
+	\begin{itemize}
+		\item При $T_u=0.5\cdot 10^{-4}: s_1=-2\cdot 10^4;~ s_{2,3}=-900\pm 10917.42i$\\
+		\item При $T_u=1\cdot 10^{-4}~: s_1=-10^4;~ s_{2,3}=-900\pm 10917.42i$\\
+		\item При $T_u=2\cdot 10^{-4}~: s_1=-0.5\cdot 10^4;~ s_{2,3}=-900\pm 10917.42i$\\
+		\item При $T_u=3\cdot 10^{-4}~: s_1=-0.33\cdot 10^4;~ s_{2,3}=-900\pm 10917.42i$\\
+	\end{itemize}
+	
 	
 	\newpage
 	\begin{center}
