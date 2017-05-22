@@ -252,7 +252,10 @@
 	\begin{gather}
 	\displaystyle
 	U\cdot \frac{K_u}{T_us+1}\cdot K_o - (x\cdot C_p +x\cdot s\cdot K_d) - F_{\text{в}} = m\cdot s^2\cdot x \\
-	x\cdot(m\cdot s^2 +C_p + s\cdot K_d) =\frac{K_u\cdot K_o}{T_us+1}\cdot U\\
+	x\cdot(m\cdot s^2 +C_p + s\cdot K_d) =\frac{K_u\cdot K_o}{T_us+1}\cdot U
+	\end{gather}
+	Так как в данном случае входной величиной является $U$, а выходной - $x$, то передаточная функция будет равна:
+	\begin{gather}
 	 W(s)=\frac{K_u\cdot K_o}{(T_u s+1)(ms^2+K_d s+C_p)}
 	\end{gather}
 	Чтобы получить модуль частотной характеристики нужно взять отношение модулей числителя и знаменателя. В последнем в качестве второго множителя для приближенного анализа можно оставить только $C_p$. В итоге:
@@ -275,7 +278,7 @@
 		]
 		\addplot [blue, mark=none, thick, solid] table [x={w}, y={L}] {data/laqc.dat};
 		
-		%\draw [->, black] (3e4,-139) -- (2e4,-140);
+		\draw [thick, dashed, black] (2e4, -145) -- (2e4,-105);
 		\end{semilogxaxis}
 		
 		\end{tikzpicture}
