@@ -75,6 +75,39 @@
 	$
 	\newpage
 	\begin{center}
+		\section{Получение передаточных функций двигателя и системы}
+	\end{center}
+\par
+		Для составления передаточной функции двигателя будем рассматривать пьезоэлектрическое устройство как упругую механическую систему. Тогда математическая модель может быть получена на основе уравнения баланса сил в пьезодвигателе:
+		\begin{gather}
+		F_y = F_O + F_\text{Д} + F_d + F_B,
+		\label{v_1}
+		\end{gather}\\
+		
+		где $F_y = C_p\cdot x, F_O = K_O\cdot U_p, F_\text{Д} = -m\displaystyle{\frac{d^2x}{d t}}$. Подставив перечисленные равенства в уравнение (\ref{v_1}), получим:
+		\begin{gather}
+		m\cdot\ddot{x} + K_d\cdot\dot{x} + C_p\cdot x = K_o\cdot U_p + F_B
+		\end{gather}\\
+		
+		Следовательно, передаточная функция пьезоэлектрического двигателя при нулевом внешнем возмущении будет следующей:
+		\begin{gather} \label{v_2}
+		W_\text{ПД}(s) = \displaystyle{\frac{K_O}{ms^2 + K_ds + C_p}}.
+		\end{gather}
+		
+		Управление ПД осуществляется с вольтного усилителя, который описывается апериодическим звеном первого порядка:
+		\begin{gather}
+		W_\text{ВУ}(s) = \frac{K_u}{T_us + 1},
+		\end{gather}\\
+		
+		Так как ВУ и ПД соединены последовательно, то передаточная функция системы:
+		\begin{gather}
+		W(s)=\frac{K_u\cdot K_o}{(T_u s+1)(ms^2+K_d s+C_p)} 
+		\end{gather}
+	
+	
+	
+	\newpage
+	\begin{center}
 	\section{Исследование системы без возмущения}
 	\end{center}
 	\paragraph {} Схема моделирования представлена на рисунке \ref{s_1}
@@ -248,13 +281,8 @@
 	\begin{center}
 		\section{Асимптотическая ЛАЧХ исполнительного устройтсва}
 	\end{center}
-	\paragraph{}По схеме моделирования составим выражение для передаточной функции системы:
-	\begin{gather}
-	\displaystyle
-	U\cdot \frac{K_u}{T_us+1}\cdot K_o - (x\cdot C_p +x\cdot s\cdot K_d) - F_{\text{в}} = m\cdot s^2\cdot x \\
-	x\cdot(m\cdot s^2 +C_p + s\cdot K_d) =\frac{K_u\cdot K_o}{T_us+1}\cdot U
-	\end{gather}
-	Так как в данном случае входной величиной является $U$, а выходной - $x$, то передаточная функция будет равна:
+	\paragraph{}
+	Передаточная функция системы имеет вид:
 	\begin{gather}
 	 W(s)=\frac{K_u\cdot K_o}{(T_u s+1)(ms^2+K_d s+C_p)}
 	\end{gather}
