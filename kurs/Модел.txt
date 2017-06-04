@@ -1,0 +1,37 @@
+\section{Моделирование полученной системы}
+Схема моделирования представлена на рисунке \ref{s_8}.\par 
+\begin{figure}[h!]
+\begin{center}
+%\includegraphics[]{img/schem2}
+\caption{Схема моделирования системы}
+\label{s_8}
+\end{center} 
+\end{figure}
+Полученный график переходного процесса выходного сигнала представлен на рисунке \ref{s_9}.\par 
+\begin{figure}[h!]
+\begin{center}
+%\includegraphics[height=9cm]{img/per2}
+\caption{График переходного процесса}
+\label{s_9}
+\end{center} 
+\end{figure}
+
+По графику определим время переходного процесса и перерегулирование:
+$t_\text{пп}=0.14c, \sigma=19\%$. Данные показатели соответствуют требуемым.\par 
+Также произведем моделирование системы при подаче гармонического сигнала $g=g_{max}sin(w_0t)$. График переходного процесса представлен на рисунке \ref{s_10} 
+\begin{figure}[h!]
+\begin{center}
+%\includegraphics[height=9cm]{img/per3}
+\caption{График переходного процесса}
+\label{s_10}
+\end{center} 
+\end{figure}\par
+График ошибки представлен на рисунке \ref{s_11}
+\begin{figure}[h!]
+\begin{center}
+%\includegraphics[height=9cm]{img/per3}
+\caption{График переходного процесса ошибки}
+\label{s_11}
+\end{center} 
+\end{figure}\par 
+Как видно по графику ошибка не превышает максимально значения $e_{max}=0.025$.\par

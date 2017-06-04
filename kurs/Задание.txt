@@ -1,0 +1,21 @@
+\section{Постановка задачи}
+Задан объект управления, описание которого определяется Wнч(s) – передаточной функцией неизменяемой части системы. Структурная схема следящей системы представлена на рисунке \ref{s_1}.
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width = 0.9\textwidth]{system.jpeg}
+	\caption{ Структурная схема следящей системы}
+	\label{s_1}
+\end{figure}
+Требуется спроектировать регулятор, включенный последовательно с неизменяемой частью системы в контуре ошибки с передаточной функцией $W_{\text{рег}}(s)$, который обеспечивает в замкнутой следящей системе с единичной обратной связью заданный набор показателей качества, который представлен в таблице \ref{t_1}
+\begin{table}[h!]
+	\centering
+	\renewcommand{\arraystretch}{2} 
+	\begin{threeparttable}
+		\caption{ Исходные данные}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|} \hline
+			$W_H(s)$	&	$K$	&	$T_1, c$	&	$T_2, c$	&	$t_\text{п}, c$	&	$\sigma$	&	$g_{max}$	& $w_0$ & $e_{max}$ \\ \hline
+			$\displaystyle{\frac{K}{(T_1s+1)\cdot (T_2s+1) \cdot s}}$	&	170	&	0.035	&	0.35	&	0.15 &	25	&	6	&	0.6 & 0.025 \\ \hline
+		\end{tabular}
+		\label{t_1}
+	\end{threeparttable}
+\end{table}

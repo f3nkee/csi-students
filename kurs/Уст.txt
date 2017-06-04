@@ -1,0 +1,16 @@
+\section{Определение устойчивости неизменяемой части системы}
+Схема моделирования и график переходного процесса представлены на рисунках \ref{s_2} и \ref{s_3} соответственно.
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=10cm]{syst.jpeg}
+		\caption{Схема моделирования неизменяемой части}
+		\label{s_2}
+	\end{center}  
+\end{figure}
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[height=9cm]{ustneizm}
+		\caption{График переходного процесса}
+		\label{s_3}
+	\end{center}  
+\end{figure}

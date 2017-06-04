@@ -28,8 +28,8 @@
 % Глубина разделов, попадающих в содержание
 \setcounter{tocdepth}{2}
 
-%\renewcommand{\rmdefault}{cmss}  Это шрифт Computer Modern Sans
-%\renewcommand{\rmdefault}{ftm} Это активируйте, если установили PSCyr
+\renewcommand{\rmdefault}{cmss} % Это шрифт Computer Modern Sans
+\renewcommand{\rmdefault}{ftm} %Это активируйте, если установили PSCyr
 \renewcommand\theadfont{\normalsize}
 
 \input{environment}
@@ -37,7 +37,16 @@
 \tolerance=1000 % настройка чувствительности вставки переносов
 \hfuzz=0pt
 \sloppy
-
+\usepackage{array}
+\usepackage{subcaption}
+\usepackage{pgfplots}
+\usetikzlibrary{pgfplots.polar}
+\pgfplotsset{compat=1.13}
+\pgfplotsset{grid = major, grid style = {dashed}}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{pgfplotstable}
+\renewcommand{\arraystretch}{1.5}
 % путь к папке с картинками
 \graphicspath{{images/}}
 
@@ -47,18 +56,19 @@
 \titleDegree{бакалавр техники и технологии}
 \titleСhief{Специализация}
 \titleSubDepartment{КСУИ}
-\gostklgi{КСУИ.112.P3440.001 ПЗ}
-\gostrazrabotchik{Клюнин А.О.} % студента
-\gostproveril{Пыркин А.А.} % проверяющего
-\gostnormokontroler{Николаев Н.А}
-\gostutverdil{Бобцов А.А}
-\gosttitledocument{Управление манипуляционным роботом с заданными силами взаимодействия\\Пояснительная записка}
-\gosttitlecompany{Университет ИТМО\\Кафедра СУИ}
-\gostlitera{д} % буква в таблице, ставится только в дипломной работе, в УИРС не надо
+\gostklgi{КСУИ.171.P3340.001 ПЗ}
+\gostrazrabotchik{Поляшов М.А.} % студента
+\gostproveril{Григорьев В.В.} % проверяющего
+\gostnormokontroler{}
+\gostutverdil{}
+\gosttitledocument{Синтез последовательного регулятора для замкнутой следящей системы методом желаемых ЛАЧХ}
+\gosttitlecompany{Университет ИТМО\\Кафедра СУиИ}
+\gostlitera{} % буква в таблице, ставится только в дипломной работе, в УИРС не надо
 \date{}
 
 \usepackage{titlesec}
-
+\titleformat{\section}[block]{\fontsize{16pt}{0cm}\bfseries\filcenter}{\thesection}{1em}{}
+\titleformat{name = \section, numberless}[hang]{\fontsize{16pt}{0cm}\bfseries}{\fillast}{1em}{}
 \titlespacing*{\section}{\parindent}{*4}{*4} \titlespacing*{\subsection}{\parindent}{*4}{*4}
 \titlespacing*{\subsubsection}{\parindent}{*4}{*4}
 \begin{document}
@@ -73,16 +83,13 @@
 	% Содержание
 	\tableofcontents
 	% Примеры разделов ПЗ
-	\include{introduction} % подцепляет файл intoduction.tex
-	\include{overview}
-	\include{workDefinition}
-	\include{po}
-	\include{control}
-	\include{exp}
-	% \include{definition} и т.д создаете столько файлов и разделов, сколько нужно
-	\include{main}
-	% \include{tests}
-	\include{conclusion} 
+	\include{vved} % подцепляет файл intoduction.tex
+	\include{task}
+	\include{ust}
+	\include{synthesis}
+	\include{mod}
+	\include{electric}
+	\include{zakl} 
 	\include{bibliography}
-	\include{appends}
+	
 \end{document}

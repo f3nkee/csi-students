@@ -1,0 +1,31 @@
+\section{Определение устойчивости неизменяемой части системы}
+Схема моделирования и график переходного процесса представлены на рисунках \ref{s_2} и \ref{s_3} соответственно.
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=10cm]{syst.jpeg}
+		\caption{Схема моделирования неизменяемой части}
+		\label{s_2}
+	\end{center}  
+\end{figure}
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[height=9cm]{ustneizm}
+		\caption{График переходного процесса}
+		\label{s_3}
+	\end{center}  
+\end{figure}
+
+Также оценим устойчивость аналитически. Характеристический многочлен системы имеет вид:
+\begin{equation}
+T_1T_2s^3+(T_1+T_2)s^2+s+K
+\end{equation}
+Для этой системы матрица Гурвица будет иметь следующий вид:
+\begin{align}
+\Gamma = \begin{bmatrix}
+0.385	&	170		&	0\\
+0.01225	&	1		&	0\\
+0		&	0.385	&	170
+\end{bmatrix}.
+\end{align}
+Так как второй определитель $\Delta_2 = (0.385\cdot1)-(0.01225\cdot 170) < 0$, то система является неустойчивой.
+

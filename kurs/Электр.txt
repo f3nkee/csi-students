@@ -1,0 +1,41 @@
+\section{–еализаци€ регул€тора}
+ѕредставим передаточную функцию регул€тора (\ref{v_1}) в виде последовательного соединени€ двух одинаковых функций вида $k\cdot \frac{Ts+1}{kTs+1}$ и одного усилител€:
+\begin{equation}
+k_1 \cdot \frac{T_{11}s+1}{k_1 T_{11}s+1} \cdot k_2 \cdot \frac{T_{22}s+1}{k_2 T_{22}s+1} \cdot k_3
+\end{equation}
+Ёлектрическа€ схема представлена на рисунке \ref{s_12}
+\begin{figure}[h!]
+\begin{center}
+%\includegraphics[height=5cm]{elrel}
+\caption{Ёлектрическа€ схема регул€тора}
+\label{s_12}
+\end{center} 
+\end{figure}\par
+
+–ассчитаем значени€ элементов схемы.
+\begin{equation}
+\begin{cases}
+
+T_{11} = R_1C_1 = 0.28\\
+k_1 = \frac{0.003}{T_{11}} = 0.01 = \frac{R_2}{R_1+R_2}\\
+T_{22} = R_3C_2 = 0.035\\
+k_2 = \frac{0.003}{T_{22}} = 0.086 = \frac{R_4}{R_3+R_4}\\
+
+
+\end{cases}
+\end{equation}
+
+ѕрин€в $C_1$ и $C_2$ по 1 мк‘ получим следующие значени€:
+\begin{equation}
+\begin{cases}
+
+C_1=C_2=1~\text{мк‘} \\
+R_1=280~\text{кќм} \\
+R_2=2.828~\text{кќм} \\
+R_3=35~\text{кќм} \\
+R_4=3.293~\text{кќм} \\
+
+\end{cases}
+\end{equation}
+
+ оэффициент усилител€ примем равным $k_3=\frac{\frac{144}{170}}{k_1\cdot k_2}=984$
