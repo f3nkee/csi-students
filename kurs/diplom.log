@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.26)  4 JUN 2017 21:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.26)  6 JUN 2017 11:47
 entering extended mode
 **./diplom.tex
 (diplom.tex
@@ -1005,8 +1005,8 @@ File: ttlkeys.def 2016/03/15
 LaTeX Warning: Unused global option(s):
     [14pt].
 
-(diplom.aux (vved.aux) (task.aux) (ust.aux) (synthesis.aux) (mod.aux)
-(electric.aux) (zakl.aux) (bibliography.aux))
+(diplom.aux (vved.aux) (vvedenie.aux) (task.aux) (ust.aux) (synthesis.aux)
+(mod.aux) (electric.aux) (zakl.aux) (bibliography.aux))
 \openout1 = `diplom.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
@@ -1210,12 +1210,16 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [5
 
  <./images/frames/Doc2.pdf>]
+\openout2 = `vvedenie.aux'.
+
+
+No file vvedenie.tex.
 \openout2 = `task.aux'.
 
- (task.tex
-<images/system.jpeg, id=77, 566.115pt x 201.00093pt>
+(task.tex <images/system.jpeg, id=77, 566.115pt x 201.00093pt>
 File: images/system.jpeg Graphic file (type jpg)
- <use images/system.jpeg>
+
+<use images/system.jpeg>
 Package pdftex.def Info: images/system.jpeg used on input line 5.
 (pdftex.def)             Requested size: 409.71689pt x 145.47504pt.
 )
@@ -1225,7 +1229,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 File: images/frames/Doc2.pdf Graphic file (type pdf)
 <use images/frames/Doc2.pdf>
-Package pdftex.def Info: images/frames/Doc2.pdf used on input line 87.
+Package pdftex.def Info: images/frames/Doc2.pdf used on input line 88.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1233,6 +1237,8 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [6
+
+
 
 
  <./images/system.jpeg>]
@@ -1292,7 +1298,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 File: images/frames/Doc2.pdf Graphic file (type pdf)
 <use images/frames/Doc2.pdf>
-Package pdftex.def Info: images/frames/Doc2.pdf used on input line 88.
+Package pdftex.def Info: images/frames/Doc2.pdf used on input line 89.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1369,7 +1375,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 File: images/frames/Doc2.pdf Graphic file (type pdf)
 <use images/frames/Doc2.pdf>
-Package pdftex.def Info: images/frames/Doc2.pdf used on input line 89.
+Package pdftex.def Info: images/frames/Doc2.pdf used on input line 90.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1470,7 +1476,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 File: images/frames/Doc2.pdf Graphic file (type pdf)
 <use images/frames/Doc2.pdf>
-Package pdftex.def Info: images/frames/Doc2.pdf used on input line 90.
+Package pdftex.def Info: images/frames/Doc2.pdf used on input line 91.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1480,12 +1486,12 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [14 <./images/per2-eps-converted-to.pdf> <./images/per1e-eps-converted-to.pdf>]
 \openout2 = `electric.aux'.
 
-(electric.tex <images/electscheme.jpeg, id=135, 709.14937pt x 369.63094pt>
-File: images/electscheme.jpeg Graphic file (type jpg)
+(electric.tex <images/neww.jpeg, id=135, 496.10344pt x 264.99pt>
+File: images/neww.jpeg Graphic file (type jpg)
 
-<use images/electscheme.jpeg>
-Package pdftex.def Info: images/electscheme.jpeg used on input line 9.
-(pdftex.def)             Requested size: 433.62pt x 226.02162pt.
+<use images/neww.jpeg>
+Package pdftex.def Info: images/neww.jpeg used on input line 9.
+(pdftex.def)             Requested size: 433.62pt x 231.61497pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 [] 
@@ -1503,14 +1509,14 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [15
 
 
- <./images/electscheme.jpeg>])
+ <./images/neww.jpeg>])
 Underfull \hbox (badness 10000) has occurred while \output is active
 [] 
  []
 
 File: images/frames/Doc2.pdf Graphic file (type pdf)
 <use images/frames/Doc2.pdf>
-Package pdftex.def Info: images/frames/Doc2.pdf used on input line 91.
+Package pdftex.def Info: images/frames/Doc2.pdf used on input line 92.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1527,7 +1533,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 File: images/frames/Doc2.pdf Graphic file (type pdf)
 <use images/frames/Doc2.pdf>
-Package pdftex.def Info: images/frames/Doc2.pdf used on input line 92.
+Package pdftex.def Info: images/frames/Doc2.pdf used on input line 93.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1547,7 +1553,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 File: images/frames/Doc2.pdf Graphic file (type pdf)
 <use images/frames/Doc2.pdf>
-Package pdftex.def Info: images/frames/Doc2.pdf used on input line 93.
+Package pdftex.def Info: images/frames/Doc2.pdf used on input line 94.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1559,27 +1565,28 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 ] 
 AED: lastpage setting LastPage
-(diplom.aux (vved.aux) (task.aux) (ust.aux) (synthesis.aux) (mod.aux)
-(electric.aux) (zakl.aux) (bibliography.aux)) ) 
+(diplom.aux (vved.aux) (vvedenie.aux) (task.aux) (ust.aux) (synthesis.aux)
+(mod.aux) (electric.aux) (zakl.aux) (bibliography.aux)) ) 
 Here is how much of TeX's memory you used:
- 29145 strings out of 493333
- 690833 string characters out of 3139197
- 868637 words of memory out of 3000000
- 31987 multiletter control sequences out of 15000+200000
+ 29151 strings out of 493333
+ 690865 string characters out of 3139197
+ 869291 words of memory out of 3000000
+ 31988 multiletter control sequences out of 15000+200000
  20390 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,16n,109p,743b,1999s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fon
-ts/enc/t2/t2a.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/pscyr/times.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pscyr/tim
-es.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pscyr/timesbd.pfb>
-Output written on diplom.pdf (15 pages, 417200 bytes).
+{C:/Program Files/MiKT
+eX 2.9/fonts/enc/t2/t2a.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/pscyr/times.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/pscyr/times.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pscyr/timesbd.
+pfb>
+Output written on diplom.pdf (15 pages, 411404 bytes).
 PDF statistics:
  182 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
